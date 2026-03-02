@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'helvetica neue';
+}
+
+html,body {
+  height: 100vh;
+  width: 100vw;
+}
+/* card style css*/
+.parent {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px;
+  background: #f4f6f9;
+}
+
+/* Card */
+.child {
+  background: #ffffff;
+  width: 320px;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.child:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Profile Image */
+.child img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid #667eea;
+}
+
+/* Name */
+.child h1 {
+  font-size: 22px;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+/* Age */
+.child span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Description */
+.child p {
+  font-size: 14px;
+  color: #555;
+  margin: 15px 0;
+}
+
+/* Button */
+.child button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 20px;
+  background: #667eea;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.child button:hover {
+  background: #5a67d8;
+}
