@@ -40,3 +40,7 @@ To build a fully functional, reusable Job Card component with:
 ---
 
 ⚡ This project is currently under development.
+
+date: 4 feb 2026 Holi 
+today i was not able to complete task of 3hrs web dev + st prep + interview prep 
+hope not to report tomorrow!!!
