@@ -1,37 +1,44 @@
+import { useState } from 'react'
 import { Bookmark } from 'lucide-react'
 
-const Card = () => {
+
+const Card = (props) => {
+
+    const [saved, setSaved] = useState(false)
+    const toggleBookmark = () => {
+        setSaved(!saved)
+    }
     return (
         <>
             <div className="card">
                 <div className="top">
-                    <div className="logo-div"><img className='brand-logo' src="../src/assets/01-logo.png" alt="Amazon-Logo" /></div>
+                    <div className="logo-div"><img className='brand-logo' src={`../src/assets/${props.company}.png`} alt="Amazon-Logo" /></div>
 
-                    <div className="bookmark">
-                        <span className='bookmark-text'>Save</span>
+                    <div className="bookmark" onClick={toggleBookmark}>
+                        <span className='bookmark-text' >{saved ? "Saved" : "Save"}</span>
                         <div className="bookmark-icon">
-                            {/* imported from lucid-react */}
-                            <Bookmark /></div>
+                            <Bookmark fill={saved ? "black" : "none"} />
+                        </div>
 
                     </div>
                 </div>
 
                 <div className="center">
                     <div>
-                        <span className='company'>Amazon</span>
-                        <span className='post-time'>5 days ago</span>
+                        <span className='company'>{props.company}</span>
+                        <span className='post-time'>{props.datePosted} days ago</span>
                     </div>
-                    <div className='job-post'>Senior UI/UX Designer</div>
+                    <div className='job-post'>{props.jobPosition}</div>
                     <div>
-                        <div className='job-type'>Part-Time</div>
-                        <div className='job-disc'>Senior Level</div>
+                        <div className='job-type'>{props.jobType}</div>
+                        <div className='job-disc'>{props.jobDesc}</div>
                     </div>
                 </div>
 
                 <div className="bottom">
                     <div>
-                        <div className="pay">$120/hr</div>
-                        <div className="location">Mumbai, India</div>
+                        <div className="pay">{props.payScale}</div>
+                        <div className="location">{props.jobLocation}</div>
                     </div>
                     <div>
                         <button>Apply now</button>

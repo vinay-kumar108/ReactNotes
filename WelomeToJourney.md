@@ -8,14 +8,13 @@ Dynamic rendering and interactive logic will be implemented in future updates.
 ---
 
 ## 🚀 Current Status
+To build a fully functional, reusable Job Card component with:
 
-✅ Card component structure
-✅ CSS styling
-✅ Responsive Grid layout
-❌ Dynamic data rendering
+✅ Clean and professional UI
+✅ Dynamic rendering using `.map()`
+✅ Bookmark toggle feature
+✅ Responsive and scalable layout
 ❌ State management
-❌ Bookmark toggle functionality
-
 ---
 
 ## 🛠 Tech Used
@@ -30,17 +29,12 @@ Dynamic rendering and interactive logic will be implemented in future updates.
 
 ## 🎯 Project Goal
 
-To build a fully functional, reusable Job Card component with:
-
-* Dynamic rendering using `.map()`
-* Bookmark toggle feature
-* Responsive and scalable layout
-* Clean and professional UI
-
----
-
 ⚡ This project is currently under development.
 
 date: 4 feb 2026 Holi 
 today i was not able to complete task of 3hrs web dev + st prep + interview prep 
-hope not to report tomorrow!!!
+hope not to repeat tomorrow!!!
+
+date: 5 feb 2026 task: 02/04 accomplished!
+* Added Dynamic rendering using `.map()`
+* Added Bookmark toggle feature using react useState
