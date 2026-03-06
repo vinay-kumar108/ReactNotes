@@ -8,6 +8,7 @@ Dynamic rendering and interactive logic will be implemented in future updates.
 ---
 
 ## 🚀 Current Status
+
 To build a fully functional, reusable Job Card component with:
 
 ✅ Clean and professional UI
@@ -15,6 +16,7 @@ To build a fully functional, reusable Job Card component with:
 ✅ Bookmark toggle feature
 ✅ Responsive and scalable layout
 ❌ State management
+
 ---
 
 ## 🛠 Tech Used
@@ -24,6 +26,7 @@ To build a fully functional, reusable Job Card component with:
 * CSS Grid
 * Google Fonts (Roboto)
 * Lucide React Icons
+* CSS Modules
 
 ---
 
@@ -31,10 +34,34 @@ To build a fully functional, reusable Job Card component with:
 
 ⚡ This project is currently under development.
 
-date: 4 feb 2026 Holi 
-today i was not able to complete task of 3hrs web dev + st prep + interview prep 
+---
+
+## 📅 Learning Log
+
+**date: 4 feb 2026 (Holi)**
+
+today i was not able to complete task of
+3hrs web dev + st prep + interview prep
+
 hope not to repeat tomorrow!!!
 
-date: 5 feb 2026 task: 02/04 accomplished!
+---
+
+**date: 5 feb 2026**
+task: **02/04 accomplished!**
+
 * Added Dynamic rendering using `.map()`
-* Added Bookmark toggle feature using react useState
+* Added Bookmark toggle feature using react `useState`
+
+---
+
+**date: 6 feb 2026**
+
+today i focused on improving the **project structure and styling approach**
+
+* Organized components into separate folders
+* Implemented **CSS Modules** (`.module.css`)
+* Created reusable component structure (Button, Header)
+* Learned better **React project organization for scalability**
+
+Small progress, but moving towards writing **clean and maintainable React code**.
