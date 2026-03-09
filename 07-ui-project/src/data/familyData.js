@@ -4,32 +4,33 @@ id:1,
 name:"Lalu Verma",
 relation:"Brother",
 age:15,
-occupation:"Noob Gamer",
-image:"/src/assets/images/lalu.jpeg"
+occupation:"Student 🧑‍🎓",
+image:"/src/assets/images/lalu.png"
 },
 {
 id:2,
-name:"Sunita Sharma",
+name:"Yogita Verma",
 relation:"Mother",
 age:45,
-occupation:"Doctor",
-image:"/src/assets/images/mother.jpg"
+occupation:"Student 🧑‍🎓",
+image:"/src/assets/images/yogi.jpg"
 },
 {
 id:3,
-name:"Amit Sharma",
+name:"Atul Kumar",
 relation:"Brother",
 age:22,
-occupation:"Student",
-image:"/src/assets/images/brother.jpg"
+occupation:"Undergraduate 🧑‍🎓",
+image:"/src/assets/images/atul.jpg"
 },
+
 {
 id:4,
-name:"Neha Sharma",
-relation:"Sister",
-age:19,
-occupation:"Designer",
-image:"/src/assets/images/sister.jpg"
+name:"MOM & DAD",
+relation:"Parents",
+age:2026-1983,
+occupation:"Ex-servicemen🧑‍🦲👩‍🦳",
+image:"/src/assets/images/dad+mom.png"
 }
 ]
 

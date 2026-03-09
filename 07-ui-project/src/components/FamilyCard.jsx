@@ -1,18 +1,25 @@
-import React from 'react'
+import React from "react";
 
 const FamilyCard = ({ member }) => {
-  return(
+  return (
 
-<div className="relative w-60 h-96 rounded-3xl overflow-hidden">
+<div className="relative w-60 h-96 rounded-3xl overflow-hidden group 
+bg-slate-800 shadow-lg hover:shadow-sky-500/20 transition duration-500">
+
+{/* image */}
 
 <img
 src={member.image}
-className="w-full h-full object-cover"
+className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
 />
+
+{/* dark gradient overlay */}
+
+<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
 
 {/* number badge */}
 
-<div className="absolute top-4 left-4 bg-white w-8 h-8 rounded-full flex items-center justify-center font-semibold">
+<div className="absolute top-4 left-4 bg-indigo-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold shadow-md">
 
 {member.id}
 
@@ -20,17 +27,17 @@ className="w-full h-full object-cover"
 
 {/* bottom info */}
 
-<div className="absolute bottom-6 left-4 text-white">
+<div className="absolute bottom-6 left-4 text-white space-y-2">
 
-<p className="text-lg bg-pink-200 px-2 py-1 rounded-full inline-block text-red-900">
+<p className="text-sm bg-sky-400 px-3 py-1 rounded-full inline-block text-slate-900 font-medium">
 {member.name}
 </p>
 
-<p className="text-xs opacity-80">
+<p className="text-xs text-slate-300">
 {member.relation} • {member.age}
 </p>
 
-<span className="bg-blue-500 px-3 py-1 rounded-full text-xs mt-2 inline-block">
+<span className="bg-indigo-500 px-3 py-1 rounded-full text-xs font-medium inline-block">
 
 {member.occupation}
 
@@ -39,7 +46,8 @@ className="w-full h-full object-cover"
 </div>
 
 </div>
-  )
-}
 
-export default FamilyCard
+  );
+};
+
+export default FamilyCard;
