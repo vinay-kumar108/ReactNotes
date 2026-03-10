@@ -3,8 +3,12 @@ import React from "react";
 const FamilyCard = ({ member }) => {
   return (
 
-<div className="relative w-60 h-96 rounded-3xl overflow-hidden group 
-bg-slate-800 shadow-lg hover:shadow-sky-500/20 transition duration-500">
+<div className="relative 
+w-44 sm:w-52 md:w-56 lg:w-60
+h-72 sm:h-80 md:h-88 lg:h-96
+rounded-3xl overflow-hidden group
+bg-slate-800 shadow-lg hover:shadow-sky-500/20
+transition duration-500 shrink-0">
 
 {/* image */}
 
@@ -15,7 +19,7 @@ className="w-full h-full object-cover group-hover:scale-110 transition duration-
 
 {/* dark gradient overlay */}
 
-<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+<div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent"></div>
 
 {/* number badge */}
 
