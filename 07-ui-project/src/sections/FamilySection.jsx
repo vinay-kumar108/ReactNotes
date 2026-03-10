@@ -9,7 +9,7 @@ flex flex-col lg:flex-row
 items-center justify-center
 gap-10 md:gap-14 lg:gap-16
 px-4 sm:px-6 md:px-10 lg:px-20
-py-16 md:py-20 min-h-screen bg-slate-900 flex items-center justify-center px-6">
+py-16 md:py-20 ">
       {/* LEFT SIDE */}
 <div className="max-w-md text-center lg:text-left px-4">
   <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-sky-400 mb-6">
