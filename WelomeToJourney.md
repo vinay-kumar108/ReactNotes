@@ -70,3 +70,6 @@ starting new project tommorow on 07 feb 2026
 
 **date: 7 feb 2026**
 learned to build UI Project.
+
+**date: 12 feb 2026**
+started learning functions
