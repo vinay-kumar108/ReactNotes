@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'helvetica neue';
+}
+
+html,body {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* below will be the styles for the main container */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+/* Main styles */
+.heading {
+  /* all seven color linear gradient */
+  background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+ /* h1 text color */
+  color: white;
+  padding: 20px;
+  margin: 100px 0 20px 0;
+  border-radius: 10px;
+}
+.btn{
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  background-color: #2f465f;
+  margin: 10px ;
+  color: white;
+  cursor: pointer;
+}
+.counter {
+  font-size: 48px;
+  margin-bottom: 20px;
+  margin: 100px 50px 20px 50px;
+  text-align: center ;
+  border: 2px solid #2f465f;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
