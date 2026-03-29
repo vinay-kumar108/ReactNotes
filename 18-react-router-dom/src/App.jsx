@@ -7,19 +7,32 @@ import Navbar from './components/Navbar.jsx'
 
 const App = () => {
   return (
-    <>
-      <Navbar />
-      
+    <BrowserRouter>
+    <Navbar />
 
-      <div className='routes'><Routes>
+
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
 
-        <Route path="*" element={<h1>Page Not Found</h1>} />
-      </Routes></div>
+        {/* 404 page */}
+        <Route path="*" element={
+          <div>
+            <p style={{
+              lineHeight: "64px",
+              fontSize: "64px",
+              fontWeight: "600"
+            }} >404</p>
+            <h1>Page Not Found</h1>
+          </div>
 
-    </>
+        } />
+      </Routes >
+    
+    </BrowserRouter>
+
+      
   )
 }
 
