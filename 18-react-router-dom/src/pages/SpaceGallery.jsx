@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 export default function SpaceGallery() {
+  const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const formattedData = Array.isArray(data) ? data : [data];
@@ -12,6 +13,7 @@ export default function SpaceGallery() {
         const res = await fetch(
           `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=8`
         );
+
         const json = await res.json();
         setData(json);
       } catch (err) {
@@ -34,24 +36,24 @@ export default function SpaceGallery() {
 
       {/* Loading */}
       {loading && (
-  <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-    {[...Array(6)].map((_, i) => (
-      <div
-        key={i}
-        className="animate-pulse bg-white/10 border border-white/20 rounded-2xl overflow-hidden"
-      >
-        <div className="h-60 bg-gray-700/40"></div>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {[...Array(6)].map((_, i) => (
+            <div
+              key={i}
+              className="animate-pulse bg-white/10 border border-white/20 rounded-2xl overflow-hidden"
+            >
+              <div className="h-60 bg-gray-700/40"></div>
 
-        <div className="p-4 space-y-3">
-          <div className="h-4 bg-gray-600/40 rounded w-3/4"></div>
-          <div className="h-3 bg-gray-600/30 rounded w-1/2"></div>
-          <div className="h-3 bg-gray-600/20 rounded w-full"></div>
-          <div className="h-3 bg-gray-600/20 rounded w-5/6"></div>
+              <div className="p-4 space-y-3">
+                <div className="h-4 bg-gray-600/40 rounded w-3/4"></div>
+                <div className="h-3 bg-gray-600/30 rounded w-1/2"></div>
+                <div className="h-3 bg-gray-600/20 rounded w-full"></div>
+                <div className="h-3 bg-gray-600/20 rounded w-5/6"></div>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-    ))}
-  </div>
-)}
+      )}
 
       {/* Grid */}
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -59,7 +61,8 @@ export default function SpaceGallery() {
         {formattedData.map((item, index) => (
           <div
             key={index}
-            className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-2xl overflow-hidden shadow-lg hover:scale-[1.03] transition duration-300"
+            onClick={() => navigate(`/details/${item.date}`)}
+            className="cursor-pointer backdrop-blur-lg bg-white/10 border border-white/20 rounded-2xl overflow-hidden shadow-lg hover:scale-[1.03] transition duration-300"
           >
             {/* Media */}
             <div className="h-60 overflow-hidden">
@@ -73,23 +76,23 @@ export default function SpaceGallery() {
                 <iframe
                   src={item.url}
                   title="space-video"
-                  className="w-full h-full"
+                  className="w-full h-full pointer-events-none"
                 />
               )}
             </div>
 
             {/* Content */}
             <div className="p-4">
-  <h2 className="text-lg font-semibold mb-1 line-clamp-2">
-    {item.title}
-  </h2>
+              <h2 className="text-lg font-semibold mb-1 line-clamp-2">
+                {item.title}
+              </h2>
 
-  <p className="text-sm text-gray-300 mb-2">{item.date}</p>
+              <p className="text-sm text-gray-300 mb-2">{item.date}</p>
 
-  <p className="text-sm text-gray-200 max-h-32 overflow-y-auto pr-2">
-    {item.explanation}
-  </p>
-</div>
+              <p className="text-sm text-gray-200 max-h-32 overflow-y-auto pr-2">
+                {item.explanation}
+              </p>
+            </div>
           </div>
         ))}
       </div>
