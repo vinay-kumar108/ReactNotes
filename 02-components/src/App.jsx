@@ -12,9 +12,9 @@ const users = [
 const App = () => {
   return (
     <>
-    {users.map((user,index)=>(
+    {users.map((user,id)=>(
       <Card
-        key={index}
+        key={id}
         username={user.username}
         age={user.age}
       />
